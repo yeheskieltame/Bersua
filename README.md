@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant Creator
     participant WebApp
@@ -109,3 +110,4 @@ sequenceDiagram
     WebApp-->>Creator: Notification - Royalty received
     
     Note over Creator,Sponsor: END - Complete Ecosystem Flow
+```
