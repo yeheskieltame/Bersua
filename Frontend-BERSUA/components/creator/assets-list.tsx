@@ -11,7 +11,7 @@ export default function AssetsList() {
       price: "Rp100K",
       sales: 12,
       views: 3400,
-      image: "/public/malin-kundang-legend.jpg",
+      image: "/malin-kundang-legend.jpg",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function AssetsList() {
       price: "Rp80K",
       sales: 8,
       views: 2100,
-      image: "/public/keris-sword-3d-model.jpg",
+      image: "/keris-sword-3d-model.jpg",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export default function AssetsList() {
       price: "Rp50K",
       sales: 5,
       views: 1200,
-      image: "/public/gamelan-music-instrument.jpg",
+      image: "/gamelan-music-instrument.jpg",
     },
   ]
 
@@ -55,7 +55,11 @@ export default function AssetsList() {
               <tr key={asset.id} className="border-b border-border hover:bg-muted/20 transition-colors">
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20" />
+                    <img
+                      src={asset.image}
+                      alt={asset.title}
+                      className="w-10 h-10 rounded-lg object-cover"
+                    />
                     <div>
                       <p className="font-semibold text-foreground">{asset.title}</p>
                       <p className="text-xs text-muted-foreground">{asset.views.toLocaleString()} views</p>

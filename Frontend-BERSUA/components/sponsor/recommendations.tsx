@@ -11,7 +11,7 @@ export default function ProjectRecommendations() {
       animator: "@epic_studio_yogya",
       aiScore: 91,
       roi: "85%",
-      image: "/public/ramayana-epic-animation.jpg",
+      image: "/ramayana-digital-animation-epic-story.jpg",
       reason: "Highest predicted ROI based on engagement metrics",
     },
     {
@@ -20,7 +20,7 @@ export default function ProjectRecommendations() {
       animator: "@architect_animator_jakarta",
       aiScore: 94,
       roi: "92%",
-      image: "/public/borobudur-temple.jpg",
+      image: "/borobudur-stone-stories-3d-animation-temple.jpg",
       reason: "Premium quality content with strong IP portfolio",
     },
     {
@@ -29,7 +29,7 @@ export default function ProjectRecommendations() {
       animator: "@animator_jogja",
       aiScore: 92,
       roi: "78%",
-      image: "/public/malin-kundang-legend.jpg",
+      image: "/malin-kundang-2049-cyberpunk-animation.jpg",
       reason: "Trending content with viral potential",
     },
   ]

@@ -13,7 +13,7 @@ export default function CreatorPortfolio() {
       title: "Wayang Gatot Kaca 3D",
       type: "3D Model",
       culture: "Jawa",
-      thumbnail: "/placeholder-3d.png",
+      thumbnail: "/wayang-kulit-modern-animation-shadow-puppet.jpg",
       views: 1234,
       likes: 89,
       downloads: 45,
@@ -26,7 +26,7 @@ export default function CreatorPortfolio() {
       title: "Gamelan Jawa Ensemble",
       type: "Musik",
       culture: "Jawa",
-      thumbnail: "/placeholder-music.png",
+      thumbnail: "/gamelan-music-instrument.jpg",
       views: 856,
       likes: 67,
       downloads: 34,
@@ -39,7 +39,7 @@ export default function CreatorPortfolio() {
       title: "Legenda Sangkuriang",
       type: "Cerita",
       culture: "Sunda",
-      thumbnail: "/placeholder-story.png",
+      thumbnail: "/sundanese-melodies-animation-music-visual.jpg",
       views: 2341,
       likes: 156,
       downloads: 78,
@@ -52,7 +52,7 @@ export default function CreatorPortfolio() {
       title: "Motif Batik Mega Mendung",
       type: "Visual 2D",
       culture: "Jawa",
-      thumbnail: "/placeholder-visual.png",
+      thumbnail: "/batik-pattern-animation.jpg",
       views: 1567,
       likes: 123,
       downloads: 56,
@@ -65,7 +65,7 @@ export default function CreatorPortfolio() {
       title: "Tari Kecak Audio",
       type: "Musik",
       culture: "Bali",
-      thumbnail: "/placeholder-music.png",
+      thumbnail: "/indonesian-folklore-music.jpg",
       views: 489,
       likes: 34,
       downloads: 12,
@@ -143,10 +143,12 @@ export default function CreatorPortfolio() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredAssets.map((asset) => (
           <div key={asset.id} className="bg-card border border-border rounded-xl overflow-hidden group hover:shadow-lg transition-shadow">
-            <div className="aspect-video bg-muted relative">
-              <div className="absolute inset-0 flex items-center justify-center text-6xl">
-                {asset.type === "3D Model" ? "🎭" : asset.type === "Musik" ? "🎵" : asset.type === "Cerita" ? "📖" : "🎨"}
-              </div>
+            <div className="aspect-video bg-muted relative overflow-hidden">
+              <img
+                src={asset.thumbnail}
+                alt={asset.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
               {asset.status === "draft" && (
                 <div className="absolute top-2 right-2 bg-amber-500 text-white text-xs px-2 py-1 rounded">Draft</div>
               )}

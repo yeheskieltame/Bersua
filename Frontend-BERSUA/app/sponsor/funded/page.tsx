@@ -11,7 +11,7 @@ export default function SponsorFunded() {
     {
       id: 1,
       title: "Ramayana: The Modern Saga",
-      thumbnail: "🏛️",
+      thumbnail: "/ramayana-epic-animation.jpg",
       culture: "Jawa",
       status: "in_production",
       fundingAmount: "Rp 50,000,000",
@@ -25,7 +25,7 @@ export default function SponsorFunded() {
     {
       id: 2,
       title: "Kerajaan Nusantara",
-      thumbnail: "👑",
+      thumbnail: "/indonesian-archipelago-cultural-animation.jpg",
       culture: "Sumatera",
       status: "in_production",
       fundingAmount: "Rp 75,000,000",
@@ -39,7 +39,7 @@ export default function SponsorFunded() {
     {
       id: 3,
       title: "Legenda Cendrawasih",
-      thumbnail: "🦜",
+      thumbnail: "/indonesian-cultural-animation-artwork-with-wayang-.jpg",
       culture: "Papua",
       status: "completed",
       fundingAmount: "Rp 35,000,000",
@@ -53,7 +53,7 @@ export default function SponsorFunded() {
     {
       id: 4,
       title: "Tari Saman Chronicles",
-      thumbnail: "💃",
+      thumbnail: "/batik-chronicles-animation-textile-patterns.jpg",
       culture: "Aceh",
       status: "pre_production",
       fundingAmount: "Rp 40,000,000",
@@ -148,8 +148,12 @@ export default function SponsorFunded() {
           >
             <div className="flex flex-col md:flex-row gap-6">
               {/* Thumbnail */}
-              <div className="w-full md:w-48 h-32 bg-muted rounded-lg flex items-center justify-center text-6xl shrink-0">
-                {project.thumbnail}
+              <div className="w-full md:w-48 h-32 bg-muted rounded-lg overflow-hidden shrink-0">
+                <img
+                  src={project.thumbnail}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Project Info */}
